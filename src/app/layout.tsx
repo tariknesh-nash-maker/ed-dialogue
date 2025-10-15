@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "حوار التعليم – المرحلة أ",
   description: "صفحة الهبوط: خريطة طريق + تسجيل الجمعيات للويبينار الأول",
