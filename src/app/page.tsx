@@ -21,7 +21,7 @@ type Row = {
   slot: string; notes: string; consent: boolean;
 };
 
-function exportCSV(rows: Row[], filename = "registrations.csv") {
+function exportCSV(rows: any[], filename = "registrations.csv") {
   const header = [
     "timestamp","province","cso_name","contact_name","email","phone",
     "commune","other_commune","interests","slot","notes","consent"
@@ -40,7 +40,7 @@ function exportCSV(rows: Row[], filename = "registrations.csv") {
       JSON.stringify(r.interests || ""),
       JSON.stringify(r.slot || ""),
       JSON.stringify(r.notes || ""),
-      r.consent ? "yes" : "no"
+      r.consent ? "yes" : "no",
     ].join(","))
     .join("\n");
 
